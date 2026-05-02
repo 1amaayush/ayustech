@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Socials</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Code:wght@400;500&family=Syne:wght@500;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg:#070b12;
+  --bg2:#0c1220;
+  --accent:#00e5a0;
+  --accent2:#3c8eff;
+  --text:#c9d4e8;
+  --muted:#5a6a8a;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Fira Code', monospace;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height:100vh;
+  overflow:hidden;
+}
+
+/* grid bg */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:
+    linear-gradient(rgba(0,229,160,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,229,160,.03) 1px, transparent 1px);
+  background-size:60px 60px;
+}
+
+/* container */
+.container{
+  text-align:center;
+  z-index:1;
+}
+
+/* name */
+.name{
+  font-family:'Bebas Neue';
+  font-size:clamp(3rem,8vw,7rem);
+  letter-spacing:2px;
+  color:white;
+}
+
+/* subtitle */
+.tag{
+  color:var(--accent);
+  font-size:.7rem;
+  letter-spacing:.3em;
+  margin-bottom:2rem;
+}
+
+/* socials grid */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:1rem;
+  max-width:700px;
+}
+
+/* card */
+.card{
+  border:1px solid rgba(0,229,160,.2);
+  padding:1.2rem;
+  text-decoration:none;
+  color:var(--text);
+  transition:.25s;
+  position:relative;
+  background:rgba(0,229,160,.02);
+}
+
+.card:hover{
+  border-color:var(--accent);
+  color:var(--accent);
+  transform:translateY(-4px);
+  box-shadow:0 0 20px rgba(0,229,160,.2);
+}
+
+/* glow line */
+.card::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  width:3px;
+  height:0;
+  background:var(--accent);
+  transition:.3s;
+}
+
+.card:hover::before{
+  height:100%;
+}
+
+/* title */
+.card h3{
+  font-family:'Syne';
+  font-size:1rem;
+  margin-bottom:.3rem;
+}
+
+/* link text */
+.card span{
+  font-size:.7rem;
+  color:var(--muted);
+}
+
+/* footer */
+.footer{
+  margin-top:2rem;
+  font-size:.65rem;
+  color:var(--muted);
+}
+.footer span{color:var(--accent);}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="tag">[ CONNECT ]</div>
+  <div class="name">AYUS</div>
+
+  <div class="grid">
+
+    <a href="https://github.com/1amaayush" class="card">
+      <h3>GitHub</h3>
+      <span>// code & projects</span>
+    </a>
+
+    <a href="https://linkedin.com/in/ayus1o1" class="card">
+      <h3>LinkedIn</h3>
+      <span>// professional</span>
+    </a>
+
+    <a href="https://www.instagram.com/theycallmeayus/" class="card">
+      <h3>Instagram</h3>
+      <span>// personal</span>
+    </a>
+
+    <a href="https://steamcommunity.com/id/1amaayush/" class="card">
+      <h3>Steam</h3>
+      <span>// gaming</span>
+    </a>
+
+    <a href="https://open.spotify.com/user/31w4tdkakmopxao2f2tkz3darddi?si=4ec4a992a3f943a1" class="card">
+      <h3>Spotify</h3>
+      <span>// music</span>
+    </a>
+
+    <a href="https://discord.com/users/483207025539416064" class="card">
+      <h3>Discord</h3>
+      <span>// reach me</span>
+    </a>
+
+  </div>
+
+  <div class="footer">
+    © <span>2026</span> — Aayushmaan.
+  </div>
+
+</div>
+
+</body>
+</html>

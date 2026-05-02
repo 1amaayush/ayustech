@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Womp Womp</title>
+             <style>
+             body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            background-size: cover;
+            background-position: center;
+            color: whitesmoke;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            }
+                    h1 {
+                font-size: 3em;
+                margin-top: 20vh;
+                text-shadow: 2px 2px 4px rgba(0,0,0,0.5); 
+                animation: wave 2s infinite linear; 
+            }
+                @keyframes wave {
+                0% { transform: rotate(-1deg); }
+                50% { transform: rotate(1deg); }
+                100% { transform: rotate(-1deg); }
+            }
+    </style>
+</head>
+<body>
+    <h1 id="wompText">WOMP WOMP</h1>
+    <h3>Touch some grass, No lifer</h3>
+    <script>
+        const wompText = document.getElementById('wompText');
+        wompText.addEventListener('click', function() {
+            wompText.textContent = "CRY MORE!";
+        });
+    </script>
+</body>
+</html>
